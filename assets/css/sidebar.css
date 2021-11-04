@@ -1,6 +1,8 @@
 .sidebar {
   background-color: #fff;
-  min-height: calc(100vh - 98px);
+  /* max-height: 100vh; */
+  max-height: calc(100vh - 98px);
+
   min-width: 225px;
   display: flex;
   flex-direction: column;
@@ -8,6 +10,8 @@
   border-right: 1px solid #e1e1e1;
   box-sizing: border-box;
   justify-content: space-between;
+  position: sticky;
+  top: 98px;
 }
 .top-item {
   padding: 0 20px;
