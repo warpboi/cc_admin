@@ -1,13 +1,13 @@
 <?php
 session_start();
-$_SESSION["userId"] = "1";
-$conn = mysqli_connect("localhost", "root", "", "users") or die("Connection Error: " . mysqli_error($conn));
+$_SESSION["id_user"] = "1";
+$conn = mysqli_connect("localhost", "root", "", "db_fashiondesign") or die("Connection Error: " . mysqli_error($conn));
 
 if (count($_POST) > 0) {
-    $result = mysqli_query($conn, "SELECT *from users WHERE userId='" . $_SESSION["userId"] . "'");
+    $result = mysqli_query($conn, "SELECT *from user WHERE id_user='" . $_SESSION["id_user"] . "'");
     $row = mysqli_fetch_array($result);
     if ($_POST["currentPassword"] == $row["password"]) {
-        mysqli_query($conn, "UPDATE users set password='" . $_POST["newPassword"] . "' WHERE userId='" . $_SESSION["userId"] . "'");
+        mysqli_query($conn, "UPDATE user set password='" . $_POST["newPassword"] . "' WHERE id_user='" . $_SESSION["id_user"] . "'");
         $message = "Password Changed";
     } else
         $message = "Current Password is not correct";
