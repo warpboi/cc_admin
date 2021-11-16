@@ -4,11 +4,7 @@ if (strpos($root, 'htdocs') !== false) {
     $root = $root . '\cc_admin';
 }
 require_once "$root/app/config/config.php";
-if (isset($_SESSION['uname'])) {
-    echo "hai";
 
-    header('Location: ' . base_url);
-}
 
 ?>
 <!DOCTYPE html>
