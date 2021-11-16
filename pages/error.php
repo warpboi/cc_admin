@@ -1,3 +1,10 @@
+<?php
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+if (strpos($root, 'htdocs') !== false) {
+    $root = $root . '\cc_admin';
+}
+require_once "$root/app/config/config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Error</title>
     <style>
         /*======================
     404 page
