@@ -122,7 +122,7 @@ if (isset($_POST['but_submit'])) {
 
             </form>
             <div class="change-password">
-                <a href="#">Change Password!</a>
+                <a href="../change-password/">Change Password!</a>
             </div>
         </div>
 
