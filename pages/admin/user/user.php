@@ -177,6 +177,7 @@ require_once("koneksi.php");
                         <table id="example2" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
+                                    <th>ID User</th>
                                     <th>Nama User</th>
                                     <th>Username</th>
                                     <th>Password</th>
@@ -190,6 +191,9 @@ require_once("koneksi.php");
                                 foreach ($result as $row) {
                             ?>    
                                 <tr>
+                                    <td>
+                                    <?php echo $row["id_user"]; ?>
+                                    </td>
                                     <td>
                                     <?php echo $row["nama"]; ?>
                                     </td>
@@ -206,7 +210,7 @@ require_once("koneksi.php");
                                         <a class="btn btn-info ion-edit" href="##">
                                             Edit</a>
                                         <button type="button" class="btn btn-warning ion-android-delete" data-toggle="modal" data-target="#delete2">
-                                            Hapus
+                                            <a href='delete.php?id_user=<?php echo $row['id_user'] ?>'>Hapus</a>
                                         </button>
                                     </td>
                                 </tr>
