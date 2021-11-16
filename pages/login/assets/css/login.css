@@ -124,7 +124,7 @@ input::placeholder{
     position: relative;
 }
 
-.change-password {
+.signup {
     font-family: Roboto;
     font-size: 16px;
     color: black;
@@ -133,8 +133,13 @@ input::placeholder{
     text-decoration: none;
 }
 
-.change-password a{
+.signup a{
     color: white;
+    text-decoration: underline;
+}
+
+.signup a:hover{
+    color: rgb(180, 180, 180);
 }
 
 .login-but{
@@ -142,5 +147,5 @@ input::placeholder{
     height:30px;
     font-family:Roboto; 
     font-size:16px; 
-    margin-right:100px;
+    margin-right:195px;
 }

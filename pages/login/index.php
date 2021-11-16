@@ -115,14 +115,13 @@ if (isset($_POST['but_submit'])) {
 
             <table class="form-table">
                 <tr>
-                    <td class="form-signup"><a href="../register" style="padding-right:10px;">Sign Up</a></td>
                     <td class="form-login"><input type="submit" class="login-but" name="but_submit" id="but_submit" value="Log In" /></td>
                 </tr>
             </table>
 
             </form>
-            <div class="change-password">
-                <a href="../change-password/">Change Password!</a>
+            <div class ="signup">
+                <a href ="../register">Belum punya akun?</a>
             </div>
         </div>
 
