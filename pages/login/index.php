@@ -8,9 +8,6 @@ require_once "$root/app/config/config.php";
 require_once "$root/app/config/Database.php";
 
 $DB = new Database();
-if (isset($_SESSION['uname'])) {
-    header('Location: ' . base_url);
-}
 
 function function_alert($message)
 {

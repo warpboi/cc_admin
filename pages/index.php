@@ -1,9 +1,11 @@
 <?php
-session_start();
-
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 if (strpos($root, 'htdocs') !== false) {
     $root = $root . '\cc_admin';
+}
+if (isset($_POST['but_logout'])) {
+    session_destroy();
+    header('Location: index.php');
 }
 ?>
 <!DOCTYPE html>
