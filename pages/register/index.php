@@ -43,7 +43,7 @@ require_once "$root/app/config/config.php";
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">
+                    <a href="../about.html" class="nav-link">
                         <span data-hover="Innovations" class="navi-text">
                             About Us
                         </span>
@@ -92,11 +92,11 @@ require_once "$root/app/config/config.php";
                 <div class="welcome">
                     Gender
                 </div>
-                <p>
+                <p class="tulisan">
                     <label><input type="radio" name="gender" value="laki-laki" /> Laki-laki</label class="form-register">
                     <label><input type="radio" name="gender" value="perempuan" /> Perempuan</label class="form-register">
                 </p>
-
+                <p><span class="sepasi">...</span></p>
                 <input type="submit" name="add_record" class="nav-signup-new btn" value="Buat Akun">
                 <p><span class="sepasi">...</span></p>
                 <p> </p>

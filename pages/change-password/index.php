@@ -81,14 +81,14 @@ if (count($_POST) > 0) {
             </div>
             <ul class="menu-container">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="../" class="nav-link">
                         <span data-hover="Home" class="navi-text">
                             Home
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">
+                    <a href="../about.html" class="nav-link">
                         <span data-hover="Innovations" class="navi-text">
                             About Us
                         </span>
