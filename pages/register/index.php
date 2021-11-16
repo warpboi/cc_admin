@@ -100,7 +100,7 @@ require_once "$root/app/config/config.php";
                 <input type="submit" name="add_record" class="nav-signup-new btn" value="Buat Akun">
                 <p><span class="sepasi">...</span></p>
                 <p> </p>
-                <p><a href="#" class="welcome">Sudah Punya Akun ?</a></p>
+                <p><a href="../login" class="welcome">Sudah Punya Akun ?</a></p>
             </form>
         </div>
 
