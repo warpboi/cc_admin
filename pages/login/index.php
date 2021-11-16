@@ -8,7 +8,6 @@ require_once "$root/app/config/config.php";
 require_once "$root/app/config/Database.php";
 
 $DB = new Database();
-
 function function_alert($message)
 {
     // Display the alert box 
@@ -92,7 +91,7 @@ if (isset($_POST['but_submit'])) {
                 </a>
                 </li>
                 <li>
-                    <a class="nav-signup btn" href="../register/">
+                    <a class="nav-signup btn" href="#">
                         <span data-hover="Innovations" class="navi-text">
                             Sign Up
                         </span>
@@ -116,9 +115,8 @@ if (isset($_POST['but_submit'])) {
 
             <table class="form-table">
                 <tr>
-                    <td class="form-signup"><a href="#" style="padding-right:20px;">SignUp</a></td>
-                    <td class="form-login"><input type="submit" name="but_submit" id="but_submit" value="Log In" style="width:80px; height:30px;
-                    font-family:Roboto; font-size:16px; margin-right:20px;" /></td>
+                    <td class="form-signup"><a href="#" style="padding-right:10px;">Sign Up</a></td>
+                    <td class="form-login"><input type="submit" class="login-but" name="but_submit" id="but_submit" value="Log In" /></td>
                 </tr>
             </table>
 
