@@ -11,8 +11,8 @@ $data['script'] =
 $data['mix_page'] = 'index';
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-if ($root == 'C:\xampp\htdocs') {
-    $root = 'C:\xampp\htdocs\cc_admin';
+if (strpos($root, 'htdocs') !== false) {
+    $root . '\cc_admin';
 }
 require_once "$root/app/views/templates/header.php";
 require_once "$root/app/views/templates/sidebar.php";
