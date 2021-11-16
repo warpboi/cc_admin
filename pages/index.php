@@ -6,8 +6,9 @@ $data['css'] =
     );
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 if (strpos($root, 'htdocs') !== false) {
-    $root . '\cc_admin';
+    $root = $root . '\cc_admin';
 }
+echo $root;
 require_once "$root/app/views/templates/header.php";
 ?>
 <div class="container--content">

@@ -12,8 +12,8 @@ $data['mix_page'] = 'clothes';
 $data['dataname'] = 'baju_man';
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-if ($root == 'C:\xampp\htdocs') {
-    $root = 'C:\xampp\htdocs\cc_admin';
+if (strpos($root, 'htdocs') !== false) {
+    $root = $root . '\cc_admin';
 }
 require_once "$root/app/views/templates/header.php";
 require_once "$root/app/views/templates/sidebar.php";
