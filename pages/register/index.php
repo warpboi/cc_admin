@@ -68,7 +68,7 @@ require_once "$root/app/config/config.php";
 
     <div class="main-container">
         <div class="login-container">
-            <form action="tambah.php">
+            <form action="tambah.php" method="POST">
                 <div class="hello-there">
                     Register
                 </div>
@@ -84,11 +84,11 @@ require_once "$root/app/config/config.php";
                 <div class="welcome">
                     Password
                 </div>
-                <input type="text_password" name="password" class="form-register">
+                <input type="password" name="password" class="form-register">
                 <div class="welcome">
                     Re-Password
                 </div>
-                <input type="text_Repassword" name="tambah_akun" class="form-register">
+                <input type="password" name="tambah_akun" class="form-register">
                 <div class="welcome">
                     Gender
                 </div>

@@ -3,6 +3,8 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 if (strpos($root, 'htdocs') !== false) {
     $root = $root . '\cc_admin';
 }
+require_once "$root/app/config/config.php";
+
 if (isset($_POST['but_logout'])) {
     session_destroy();
     header('Location: index.php');
