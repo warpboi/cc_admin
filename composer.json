@@ -1,0 +1,14 @@
+{
+    "name": "kel6/fashion-design",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "php": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kel6\\FashionDesign\\": "app/"
+        }
+    }
+}
