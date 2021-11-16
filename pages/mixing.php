@@ -18,7 +18,7 @@ require_once "$root/app/views/templates/header.php";
 require_once "$root/app/views/templates/sidebar.php";
 
 if (!isset($_SESSION['uname'])) {
-    header('Location: ' . base_url);
+    header('Location: ' . base_url . '/login/');
 }
 
 require_once "$root/app/models/Recomendation.php";

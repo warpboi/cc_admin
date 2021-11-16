@@ -1,3 +1,16 @@
+<?php
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+if (strpos($root, 'htdocs') !== false) {
+    $root = $root . '\cc_admin';
+}
+require_once "$root/app/config/config.php";
+if (isset($_SESSION['uname'])) {
+    echo "hai";
+
+    header('Location: ' . base_url);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +40,7 @@
             </div>
             <ul class="menu-container">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="../" class="nav-link">
                         <span data-hover="Home" class="navi-text">
                             Home
                         </span>
