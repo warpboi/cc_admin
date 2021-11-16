@@ -12,6 +12,9 @@ $data['mix_page'] = 'shoes';
 $data['dataname'] = 'sepatu';
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+if ($root == 'C:\xampp\htdocs') {
+    $root = 'C:\xampp\htdocs\cc_admin';
+}
 require_once "$root/app/views/templates/header.php";
 require_once "$root/app/views/templates/sidebar.php";
 require_once "$root/app/models/ShoesMan.php";

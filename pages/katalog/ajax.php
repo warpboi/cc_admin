@@ -1,6 +1,9 @@
   
   <?php
   $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+  if ($root == 'C:\xampp\htdocs') {
+    $root = 'C:\xampp\htdocs\cc_admin';
+  }
 
   if (isset($_GET['clothes'])) {
     require_once "$root/app/models/ClothMan.php";
