@@ -186,3 +186,22 @@ ALTER TABLE pakaian_woman
 -- 
 -- ERRORS                                   0
 -- WARNINGS                                 0
+INSERT INTO `baju_man` (`id_baju_man`, `nama`, `harga`, `gambar`, `link`) VALUES
+	(1, 'Polo shirt Kaos Kerah lengan panjang Ua Golf', 150000, 'bm_1', 'https://tokopedia.link/TUDYQoAU4kb'),
+	(2, 'KAOS POLO / KERAH / GOLF PRIA CUTI LAKOS ORIGINAL PIER ONE RETAIL 700K - S, Putih', 99000, 'bm_2', 'https://tokopedia.link/q9rYZawU4kb'),
+	(3, 'Kaos Someone Gold Koi 172D Glow In The Dark - S', 75000, 'bm_3', 'https://tokopedia.link/zbescSEU4kb'),
+	(4, 'Kith X MLB New York Yankees NY Embroidery T-Shirt Navy - M', 189070, 'bm_4', 'https://tokopedia.link/qA9i3NMU4kb'),
+	(5, 'Human Made 2026 T-Shirt Black - M', 179280, 'bm_5', 'https://tokopedia.link/37BWfqPU4kb');
+
+INSERT INTO `celana_man` (`id_celana_man`, `nama`, `harga`, `gambar`, `link`) VALUES
+	(1, 'Motz Chino Washing Basic Reguler Cream - XL', 492750, 'cm_1', 'https://tokopedia.link/pDHh8I6U4kb'),
+	(2, 'https://tokopedia.link/CKfE9D2U4kb', 179280, 'cm_2', 'https://tokopedia.link/CKfE9D2U4kb'),
+	(3, 'UNQ Slim Fit Chino Pants Olive - 33/85', 179, 'cm_3', 'https://tokopedia.link/tb2bi80U4kb');
+
+INSERT INTO `sepatu_man` (`id_sepatu`, `nama`, `harga`, `gambar`, `link`) VALUES
+	(1, 'BRODO - Sneakers Pria Active Zeal Beast Olive Orange IS - 41', 530, 'sm_1', 'https://tokopedia.link/8lmpaTtV4kb'),
+	(2, 'Sneakers Pria BRODO Base Lite All White GS - 41', 299000, 'sm_2', 'https://tokopedia.link/5HtOl8rV4kb');
+
+INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `gender`) VALUES
+	(69, 'Jhhonathan', 'jhonny', 'jhonny123', 'l');
+
