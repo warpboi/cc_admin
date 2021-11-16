@@ -102,12 +102,13 @@ input::placeholder{
     font-family: Roboto;
     font-size: 16px;
     color: black;
-    background-color: white;
+    /* background-color: white; */
     border: 1px solid black;
     width: 80px;
     text-align: center;
     padding:5px 5px 5px 5px;
     border-radius: 10px;
+    border-style:none;
 }
 
 .form-login a:hover{
