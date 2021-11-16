@@ -89,7 +89,7 @@ if (isset($_POST['but_submit'])) {
                 </a>
                 </li>
                 <li>
-                    <a class="nav-signup btn" href="../register/">
+                    <a class="nav-signup btn" href="../register">
                         <span data-hover="Innovations" class="navi-text">
                             Sign Up
                         </span>
@@ -113,15 +113,13 @@ if (isset($_POST['but_submit'])) {
 
             <table class="form-table">
                 <tr>
-                    <td class="form-signup"><a href="#" style="padding-right:20px;">SignUp</a></td>
-                    <td class="form-login"><input type="submit" name="but_submit" id="but_submit" value="Log In" style="width:80px; height:30px;
-                    font-family:Roboto; font-size:16px; margin-right:20px;" /></td>
+                    <td class="form-login"><input type="submit" class="login-but" name="but_submit" id="but_submit" value="Log In" /></td>
                 </tr>
             </table>
 
             </form>
-            <div class="change-password">
-                <a href="#">Change Password!</a>
+            <div class="signup">
+                <a href="../register">Belum punya akun?</a>
             </div>
         </div>
 
