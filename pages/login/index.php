@@ -115,9 +115,8 @@ if (isset($_POST['but_submit'])) {
 
             <table class="form-table">
                 <tr>
-                    <td class="form-signup"><a href="#" style="padding-right:20px;">SignUp</a></td>
-                    <td class="form-login"><input type="submit" name="but_submit" id="but_submit" value="Log In" style="width:80px; height:30px;
-                    font-family:Roboto; font-size:16px; margin-right:20px;" /></td>
+                    <td class="form-signup"><a href="#" style="padding-right:10px;">Sign Up</a></td>
+                    <td class="form-login"><input type="submit" name="but_submit" id="but_submit" value="Log In" class="login-but" /></td>
                 </tr>
             </table>
 
