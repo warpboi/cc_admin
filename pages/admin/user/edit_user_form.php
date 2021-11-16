@@ -1,7 +1,7 @@
 <?php
 
 require_once("koneksi.php");
-$stmt = $pdo_conn->prepare("SELECT * FROM user WHERE id_user='".$_GET["id_user"]."', nama='". $_POST['nama']."', username='".$_POST['username']."', password='".$_POST['password']."', gender='".$_POST['gender']."'");
+$stmt = $pdo_conn->prepare("SELECT * FROM user WHERE id_user='".$_GET["id_user"]."'");
 $stmt->execute();
 $result = $stmt->fetchAll();
 ?>
@@ -165,7 +165,7 @@ $result = $stmt->fetchAll();
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-md-12"><label class="labels">ID User</label><input type="text"
-                                                class="form-control " placeholder="ID User" value="" name="id"
+                                                class="form-control " placeholder="ID User" value="<?php echo $result[0]['id_user']; ?>" name="nama" id="nama" name="id"
                                                 maxlength="10" readonly>
                                         </div>
                                     </div>
@@ -173,7 +173,7 @@ $result = $stmt->fetchAll();
                                         <div class="col-md-12">
                                             <label class="labels">Nama User</label>
                                             <input type="text" class="form-control " placeholder="Masukkan Nama User Anda"
-                                                value="<?php echo $result[0]['id_user']; ?>" name="nama" id="nama">
+                                                value="<?php echo $result[0]['nama']; ?>" name="nama" id="nama">
                                         </div>
                                     </div>
                                     <div class="row mt-3">

@@ -207,8 +207,9 @@ require_once("koneksi.php");
                                     <?php echo $row["gender"]; ?>
                                     </td>
                                     <td>
-                                        <a class="btn btn-info ion-edit" href="##">
-                                            Edit</a>
+                                        <button type="button" class="btn btn-info ion-edit" data-toggle="modal" data-target="#edit2">
+                                        <a  href="edit_user_form.php?id_user=<?php echo $row['id_user'] ?>">
+                                            Edit</a></button>
                                         <button type="button" class="btn btn-warning ion-android-delete" data-toggle="modal" data-target="#delete2">
                                             <a href='delete.php?id_user=<?php echo $row['id_user'] ?>'>Hapus</a>
                                         </button>
