@@ -1,3 +1,7 @@
+let base_url = window.location.origin;
+if (base_url.includes("localhost")) {
+  base_url = base_url + "/cc_admin";
+}
 let buttonAdd = document.querySelectorAll(".btn-add");
 console.log(buttonAdd[0]);
 function ajaxReq() {
@@ -38,9 +42,7 @@ function addToList(button) {
   if (button.getAttribute("data-item") == "clothes") {
     console.log("yow");
     ajax_get(
-      window.location.origin +
-        "/katalog/ajax.php?clothes=" +
-        button.getAttribute("data-id"),
+      base_url + "/katalog/ajax.php?clothes=" + button.getAttribute("data-id"),
       function (data) {
         id = data["id"];
         console.log(id);
@@ -49,15 +51,13 @@ function addToList(button) {
         const clothObject = composeClothObject(id, img, link);
         clothes.push(clothObject);
         updateDataToStorage();
-        location.href = "../mixing";
+        location.href = base_url + "/mixing";
       }
     );
   } else if (button.getAttribute("data-item") == "pants") {
     console.log("yow");
     ajax_get(
-      window.location.origin +
-        "/katalog/ajax.php?pants=" +
-        button.getAttribute("data-id"),
+      base_url + "/katalog/ajax.php?pants=" + button.getAttribute("data-id"),
       function (data) {
         id = data["id"];
         console.log(id);
@@ -66,15 +66,13 @@ function addToList(button) {
         const pantsObject = composePantsObject(id, img, link);
         pants.push(pantsObject);
         updateDataToStorage();
-        location.href = "../mixing";
+        location.href = base_url + "/mixing";
       }
     );
   } else if (button.getAttribute("data-item") == "shoes") {
     console.log("yow3");
     ajax_get(
-      window.location.origin +
-        "/katalog/ajax.php?shoes=" +
-        button.getAttribute("data-id"),
+      base_url + "/katalog/ajax.php?shoes=" + button.getAttribute("data-id"),
       function (data) {
         id = data["id"];
         console.log(id);
@@ -83,7 +81,7 @@ function addToList(button) {
         const shoesObject = composeShoesObject(id, img, link);
         shoes.push(shoesObject);
         updateDataToStorage();
-        location.href = "../mixing";
+        location.href = base_url + "/mixing";
       }
     );
   }

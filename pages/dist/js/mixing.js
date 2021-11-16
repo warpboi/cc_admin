@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (i == 0) {
           imageCloth.classList.add("firstImage");
         }
-        imageCloth.src = "../uploads/" + e["img"] + ".jpg";
+        imageCloth.src = base_url + "/uploads/" + e["img"] + ".jpg";
         clothesListContainer.append(imageCloth);
       });
   } else {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (i == 0) {
           imageCloth.classList.add("firstImage");
         }
-        imageCloth.src = "../uploads/" + e["img"] + ".jpg";
+        imageCloth.src = base_url + "/uploads/" + e["img"] + ".jpg";
         pantsListContainer.append(imageCloth);
       });
   } else {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (i == 0) {
           imageCloth.classList.add("firstImage");
         }
-        imageCloth.src = "../uploads/" + e["img"] + ".jpg";
+        imageCloth.src = base_url + "/uploads/" + e["img"] + ".jpg";
         shoesListContainer.append(imageCloth);
       });
   } else {
