@@ -9,10 +9,18 @@ require_once "$root/app/config/Database.php";
 $DB = new Database();
 
 if (count($_POST) > 0) {
-    $result = mysqli_query($conn, "SELECT *from user WHERE id_user='" . $_SESSION["id_user"] . "'");
-    $row = mysqli_fetch_array($result);
+    $query = "SELECT * FROM  user WHERE username= :usname ";
+    $DB->query($query);
+    $DB->bind('usname', $_SESSION['uname']);
+    $result = $DB->single();
+    $row=$result;
+
     if ($_POST["currentPassword"] == $row["password"]) {
-        mysqli_query($conn, "UPDATE user set password='" . $_POST["newPassword"] . "' WHERE id_user='" . $_SESSION["id_user"] . "'");
+        $query = "UPDATE user set password =:password WHERE id_user=:usname";
+        $DB->query($query);
+        $DB->bind('usname', $row['id_user']);
+        $DB->bind('password',  $_POST["newPassword"]);
+        $DB->execute();
         $message = "Password Changed";
     } else
         $message = "Current Password is not correct";
