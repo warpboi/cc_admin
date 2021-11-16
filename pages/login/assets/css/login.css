@@ -110,6 +110,13 @@ input::placeholder{
     border-radius: 10px;
     border-style:none;
 }
+.login-but{
+    width:80px; 
+    height:30px;
+    font-family:Roboto; 
+    font-size:16px; 
+    margin-right:100px;
+}
 
 .form-login a:hover{
     background-color: #e1e1e1;
@@ -137,10 +144,3 @@ input::placeholder{
     color: white;
 }
 
-.login-but{
-    width:80px; 
-    height:30px;
-    font-family:Roboto; 
-    font-size:16px; 
-    margin-right:100px;
-}
