@@ -1,7 +1,12 @@
 <?php
-session_start();
-$_SESSION["id_user"] = "1";
-$conn = mysqli_connect("localhost", "root", "", "db_fashiondesign") or die("Connection Error: " . mysqli_error($conn));
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+if (strpos($root, 'htdocs') !== false) {
+    $root = $root . '\cc_admin';
+}
+require_once "$root/app/config/config.php";
+require_once "$root/app/config/Database.php";
+
+$DB = new Database();
 
 if (count($_POST) > 0) {
     $result = mysqli_query($conn, "SELECT *from user WHERE id_user='" . $_SESSION["id_user"] . "'");
