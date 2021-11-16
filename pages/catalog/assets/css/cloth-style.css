@@ -1,0 +1,30 @@
+.cloth-style{
+    position: absolute;
+    z-index: 50;
+    border-bottom: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    height: 70px;
+    box-sizing: border-box;
+    width: calc(100vw - 224px);;
+    background-color: white;
+    display: block;
+    margin-left: -18px;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.cloth-table a{
+    font-size: 16px;
+    font-family: Montserrat;
+    color: #C7C7C7;
+    border-radius: 80px;
+    border: 2px solid #e1e1e1;
+    padding: 10px 15px;
+    text-align: center;
+    width:10px;
+}
+
+.cloth-table a:hover{
+    border: 1px solid black;
+    color: black;
+}
