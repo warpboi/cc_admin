@@ -91,7 +91,7 @@ if (isset($_POST['but_submit'])) {
                 </a>
                 </li>
                 <li>
-                    <a class="nav-signup btn" href="#">
+                    <a class="nav-signup btn" href="../register">
                         <span data-hover="Innovations" class="navi-text">
                             Sign Up
                         </span>
@@ -115,7 +115,7 @@ if (isset($_POST['but_submit'])) {
 
             <table class="form-table">
                 <tr>
-                    <td class="form-signup"><a href="#" style="padding-right:10px;">Sign Up</a></td>
+                    <td class="form-signup"><a href="../register" style="padding-right:10px;">Sign Up</a></td>
                     <td class="form-login"><input type="submit" class="login-but" name="but_submit" id="but_submit" value="Log In" /></td>
                 </tr>
             </table>
