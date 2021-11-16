@@ -60,7 +60,7 @@ if (isset($_POST['but_logout'])) {
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link nav-signup btn" href="./register/">
+                        <a class="nav-link nav-signup btn" style="border-radius:40px;" href="./register/">
                             <span data-hover="Innovations" class="navi-text">
                                 Sign Up
                             </span>

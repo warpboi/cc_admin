@@ -388,3 +388,7 @@ footer h4 {
     width: calc(100vw - 10vw);
   }
 }
+
+.active-nav{
+  background-color: #afaeae1f;
+}
