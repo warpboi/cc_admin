@@ -127,7 +127,7 @@ if (count($_POST) > 0) {
             <input class="input-form" id="newPassword" type="password" name="newPassword" placeholder="New Password" style="height: 47px"/>
             <input class="input-form" id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" style="height: 47px"/>
             <p><input type="submit" name="submit" value="Change Password" class="btn2"></input></p>
-            <p><a href="#" class="backtologin">Back to Home page</a></p>
+            <p><a href="../" class="backtologin">Back to Home page</a></p>
              </div>
             </form> 
     </main>
