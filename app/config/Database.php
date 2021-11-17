@@ -1,6 +1,9 @@
 <?php
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+if ($root == 'C:\xampp\htdocs') {
+	$root = 'C:\xampp\htdocs\cc_admin';
+}
 require_once "$root/app/config/config.php";
 
 class Database

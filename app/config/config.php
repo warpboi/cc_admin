@@ -1,7 +1,5 @@
 <?php
 
-namespace Kel6\FashionDesign;
-
 function url()
 {
     if (
