@@ -74,7 +74,7 @@ if (isset($_POST['but_submit'])) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">
+                    <a href="../about.html" class="nav-link">
                         <span data-hover="Innovations" class="navi-text">
                             About Us
                         </span>
