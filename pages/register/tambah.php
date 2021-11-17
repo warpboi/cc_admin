@@ -22,8 +22,20 @@ if (isset($_POST["add_record"])) {
     $DB->bind('password', $password);
     $DB->bind('gender', $gender);
     $DB->execute();
-    if ($DB->rowCount() > 0) {
+    $row = $DB->rowCount();
+
+    $query = "SELECT * FROM  user WHERE username= :usname AND password= :pass";
+    $DB->query($query);
+    $DB->bind('usname', $uname);
+    $DB->bind('pass', $password);
+    $DB->execute();
+    $userdata = $DB->single();
+
+    if ($row > 0) {
         $_SESSION['uname'] = $uname;
+        $_SESSION['id_user'] = $userdata['id_user'];
+        $_SESSION['gender_user'] = $userdata['gender'];
+
         header('Location: ' . base_url);
     }
     // $sql = "INSERT INTO regist (nama, username, password, gender,) VALUES (:name,:username,:password,:gender)";

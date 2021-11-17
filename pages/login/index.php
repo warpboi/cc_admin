@@ -24,16 +24,19 @@ if (isset($_POST['but_submit'])) {
         $DB->query($query);
         $DB->bind('usname', $uname);
         $DB->bind('pass', $password);
-        $DB->execute();
+        $userdata = $DB->single();
         $row = $DB->rowCount();
 
+        echo $userdata['id_user'];
         $count = $row;
 
         if ($count > 0) {
             $_SESSION['uname'] = $uname;
+            $_SESSION['id_user'] = $userdata['id_user'];
+            $_SESSION['gender_user'] = $userdata['gender'];
             header('Location: ' . base_url . '/mixing');
         } else {
-            // echo "Invalid username and password";
+            echo "Invalid username and password";
             function_alert("Invalid username and password");
         }
     }
