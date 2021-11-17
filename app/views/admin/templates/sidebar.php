@@ -54,6 +54,43 @@
                     </p>
                   </a>
                 </li>
+                <li class="nav-item <?php if (in_array("item", $data['page'])) {
+                                      echo 'menu-open';
+                                    } ?>">
+                  <a href="#" class="nav-link <?php if (in_array("item", $data['page'])) {
+                                                echo 'active';
+                                              } ?>">
+                    <i class="nav-icon fas ion-ios-pricetags-outline"></i>
+                    <p>
+                      Pakaian
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="<?= base_url; ?>/admin/item/baju/" class="nav-link <?php if (in_array("baju", $data['page'])) {
+                                                                                    echo 'active';
+                                                                                  } ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Baju</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link <?php if ($data['page'] == 'dashboard') {
+                                                    echo 'active';
+                                                  } ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Celana</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Sepatu</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
                 <li class="nav-item">
                   <a href="<?= base_url; ?>/admin/item" class="nav-link <?php if ($data['page'] == 'item') {
                                                                           echo 'active';

@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let baju_selected = document.querySelector("#baju_selected");
+  let celana_selected = document.querySelector("#celana_selected");
+  let sepatu_selected = document.querySelector("#sepatu_selected");
   let clothes_imagesAreaImages = document.querySelectorAll(
     "#cloth .images-area img"
   );
@@ -70,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
       210 * currentImageMinusOne
     }px`;
     console.log(600 * currentImageMinusOne);
+    console.log(clothes_currentImageCount);
+    fillClothID(clothes_currentImageCount);
   })();
 
   function removeAllActive(targetElement) {
@@ -121,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       210 * currentImageMinusOne
     }px`;
     console.log(600 * currentImageMinusOne);
+    fillPantsID(pants_currentImageCount);
   })();
 
   function removeAllActive(targetElement) {
@@ -172,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
       210 * currentImageMinusOne
     }px`;
     console.log(600 * currentImageMinusOne);
+    fillShoesID(shoes_currentImageCount);
   })();
 
   function removeAllActive(targetElement) {
@@ -191,3 +198,22 @@ document.addEventListener("DOMContentLoaded", function () {
       : shoes_nextBtn.classList.remove("disabled");
   }
 });
+
+function fillClothID(id) {
+  let temp = clothes.map((e, i, a) => a[a.length - 1 - i]);
+  let val = temp[id - 1]["id"];
+
+  baju_selected.value = val;
+}
+function fillPantsID(id) {
+  let temp = pants.map((e, i, a) => a[a.length - 1 - i]);
+  let val = temp[id - 1]["id"];
+
+  celana_selected.value = val;
+}
+function fillShoesID(id) {
+  let temp = shoes.map((e, i, a) => a[a.length - 1 - i]);
+  let val = temp[id - 1]["id"];
+
+  sepatu_selected.value = val;
+}
