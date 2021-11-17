@@ -159,16 +159,19 @@ CREATE TABLE `sepatu_woman` (
 
 /*Table structure for table `user` */
 
-CREATE TABLE USER (
-    id_user  INTEGER NOT NULL,
-    nama     VARCHAR(30) NOT NULL,
-    username VARCHAR(30) NOT NULL,
-    password VARCHAR(60) NOT NULL,
-    gender   CHAR(1) NOT NULL
-);
+DROP TABLE IF EXISTS `user`;
 
-ALTER TABLE USER ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(30) DEFAULT NULL,
+  `username` varchar(30) DEFAULT NULL,
+  `password` varchar(60) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id_user`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `gender`) VALUES
-	(69, 'Jhhonathan', 'jhonny', 'jhonny123', 'l');
+/*Data for the table `user` */
 
+insert  into `user`(`id_user`,`nama`,`username`,`password`,`gender`) values 
+(10,'User','user','user','laki-laki'),
+(11,'jono','jono','jono','1');
