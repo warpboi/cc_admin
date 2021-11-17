@@ -5,7 +5,7 @@
     <div class="subscription">
       <form action="#">
         <input type="text" name="email" id="email" placeholder="Your Email" autocomplete="off" />
-        <input type="submit" value="Subscribe" />
+        <input class="btn-grad" type="submit" value="Subscribe" />
       </form>
     </div>
     <p>&#169; 2021 Fashion Design Inc.</p>

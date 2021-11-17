@@ -20,8 +20,6 @@ if (isset($_POST['but_submit'])) {
     $password = $_POST['txt_pwd'];
 
     if ($uname != "" && $password != "") {
-        echo $password;
-
         $query = "SELECT * FROM  user WHERE username= :usname AND password= :pass";
         $DB->query($query);
         $DB->bind('usname', $uname);
@@ -33,7 +31,7 @@ if (isset($_POST['but_submit'])) {
 
         if ($count > 0) {
             $_SESSION['uname'] = $uname;
-            header('Location: ' . base_url);
+            header('Location: ' . base_url . '/mixing');
         } else {
             // echo "Invalid username and password";
             function_alert("Invalid username and password");
