@@ -1,9 +1,15 @@
 <?php
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+if (strpos($root, 'htdocs') !== false) {
+    $root = $root . '\cc_admin';
+}
+require_once "$root/app/config/config.php";
+require_once "$root/app/config/Database.php";
 
-class Cloth
+class Item
 {
 
-    private $table = 'baju_man';
+    private $table = 'celana_man';
     private $db;
 
     public function __construct()
@@ -11,15 +17,15 @@ class Cloth
         $this->db = new Database;
     }
 
-    public function getAllBaju()
+    public function getAllCelana()
     {
-        $this->db->query("SELECT buku.*, kategori.nama_kategori FROM " . $this->table . " JOIN kategori ON kategori.id = buku.kategori_id");
+        $this->db->query("SELECT * ,id_celana_man as id FROM " . $this->table . " ");
         return $this->db->resultSet();
     }
 
-    public function getBukuById($id)
+    public function getCelanaById($id)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->query('SELECT * ,id_celana_man as id FROM ' . $this->table . ' WHERE id_celana_man=:id');
         $this->db->bind('id', $id);
         return $this->db->single();
     }

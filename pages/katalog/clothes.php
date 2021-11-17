@@ -60,7 +60,7 @@ $data['items'] = $cloth_man->getAllBaju();
     foreach ($data['items'] as $e) {
     ?>
         <div class="item card">
-            <img src="<?= base_url; ?>/uploads/<?= $e['gambar'] ?>.jpg" alt="">
+            <img src="<?= base_url; ?>/uploads/<?= $e['gambar'] ?>" alt="">
             <h3><?= $e['nama'] ?></h3>
             <p class="price">Rp <?= number_format($e['harga'], 2, ',', '.') ?></p>
             <p> <button data-id="<?= $e['id'] ?>" data-item="<?= $data['mix_page'] ?>" class="btn-add ">+</button>
