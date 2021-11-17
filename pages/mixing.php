@@ -30,7 +30,7 @@ $data['items'] = $recomendation->getAllRecomendation();
 <div class="container--content">
     <div class="container">
         <section class="customize">
-            <h1>Customize Your Outfit</h1>
+            <h1 class="header-sec">Customize Your Outfit</h1>
 
             <div class="picker" id="cloth">
                 <button class="previous-btn" id="pick_cloth"><i class="fas fa-chevron-left"></i></button>
@@ -74,6 +74,14 @@ $data['items'] = $recomendation->getAllRecomendation();
                 <button class="next-btn" id="pick_shoes"><i class="fas fa-chevron-right"></i></button>
 
             </div>
+            <form action="./link-pembelian" method="post">
+                <input type="hidden" name="baju" id="baju_selected" />
+                <input type="hidden" name="celana" id="celana_selected" />
+                <input type="hidden" name="sepatu" id="sepatu_selected" />
+
+                <input class="btn-grad mix-submit" type="submit" name="submit-pakaian" value="OK" />
+            </form>
+        </section>
     </div>
     </section>
     <section class="recomendation">
@@ -91,7 +99,7 @@ $data['items'] = $recomendation->getAllRecomendation();
         </div>
     </section>
 </div>
-</div>
+
 <?php
 require_once "$root/app/views/templates/footer.php";
 ?>

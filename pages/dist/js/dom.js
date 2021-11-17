@@ -49,6 +49,10 @@ function addToList(button) {
         img = data["gambar"];
         link = data["link"];
         const clothObject = composeClothObject(id, img, link);
+        let sameIndex = clothes.findIndex((e) => e.id === id);
+        if (sameIndex != -1) {
+          clothes.splice(sameIndex, 1);
+        }
         clothes.push(clothObject);
         updateDataToStorage();
         location.href = base_url + "/mixing";
@@ -64,6 +68,10 @@ function addToList(button) {
         img = data["gambar"];
         link = data["link"];
         const pantsObject = composePantsObject(id, img, link);
+        let sameIndex = pants.findIndex((e) => e.id === id);
+        if (sameIndex != -1) {
+          pants.splice(sameIndex, 1);
+        }
         pants.push(pantsObject);
         updateDataToStorage();
         location.href = base_url + "/mixing";
@@ -79,6 +87,10 @@ function addToList(button) {
         img = data["gambar"];
         link = data["link"];
         const shoesObject = composeShoesObject(id, img, link);
+        let sameIndex = shoes.findIndex((e) => e.id === id);
+        if (sameIndex != -1) {
+          shoes.splice(sameIndex, 1);
+        }
         shoes.push(shoesObject);
         updateDataToStorage();
         location.href = base_url + "/mixing";

@@ -37,14 +37,15 @@ header {
 }
 main {
   display: flex;
+  justify-content: center;
   min-height: calc(100vh - 98px);
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
-  padding: 5px 10px;
+  padding: 10px 60px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -52,22 +53,23 @@ main {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 80px;
-  height: 40px;
-  width: 300px;
+  width: 190px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .button:hover {
-  color: #4CAF50;
+  color: #4caf50;
   opacity: 100%;
   background-color: rgba(83, 84, 97, 0.048);
 }
 .tabel {
   margin-right: 150px;
-  position: relative ;
+  position: relative;
   width: 700px;
   height: 400px;
   text-align: center;
   border-collapse: collapse;
-  
 }
 .baju {
   height: 200px;
@@ -79,12 +81,12 @@ main {
   height: 170px;
 }
 
-.link{
+.link {
   height: 50px;
   width: 50px;
   padding-top: 5px;
 }
-.link:hover{
+.link:hover {
   opacity: 100%;
   background-color: rgba(83, 84, 97, 0.048);
   border-radius: 90px;
@@ -207,6 +209,8 @@ nav ul li {
 
 .container--content {
   box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 50px;
   width: calc(100vw - 224px);
   max-width: 1300px;
   /* min-width: 85%; */
@@ -216,10 +220,14 @@ nav ul li {
   flex-direction: column;
   background-color: #fff;
 }
-.container--content p{
-    text-align: center;
-	  line-height: 70px;
-    font-size: 45px;
+.container--content p {
+  text-align: center;
+  line-height: 70px;
+  font-size: 45px;
+}
+
+.back-to-mix {
+  margin-top: 50px;
 }
 /* --------------------------------------- */
 

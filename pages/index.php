@@ -6,8 +6,14 @@ if (strpos($root, 'htdocs') !== false) {
 require_once "$root/app/config/config.php";
 
 if (isset($_POST['but_logout'])) {
+    ob_start();
     session_destroy();
-    header('Location: index.php');
+    echo "
+  <script>
+    localStorage.clear();
+  </script>";
+    ob_end_flush();
+    header("refresh:0.1;url=index.php");
 }
 ?>
 <!DOCTYPE html>

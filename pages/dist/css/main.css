@@ -191,6 +191,22 @@ nav ul li {
   background-color: #fff;
   width: 100%;
 }
+.btn-grad {
+  color: #fff;
+
+  background: rgb(13, 0, 227);
+  background: linear-gradient(
+    16deg,
+    rgba(13, 0, 227, 1) 0%,
+    rgba(123, 1, 222, 1) 78%
+  );
+  border: none;
+  padding: 7px 25px;
+  border-radius: 60px;
+  margin-left: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
 /* --------------------------------------- */
 
 /* ----------- NAV RESPONSIVE-------------- */
@@ -258,22 +274,7 @@ footer h4 {
   border-radius: 60px;
   font-size: 16px;
 }
-.subscription input[type="submit"] {
-  color: #fff;
 
-  background: rgb(13, 0, 227);
-  background: linear-gradient(
-    16deg,
-    rgba(13, 0, 227, 1) 0%,
-    rgba(123, 1, 222, 1) 78%
-  );
-  border: none;
-  padding: 7px 25px;
-  border-radius: 60px;
-  margin-left: 15px;
-  font-size: 16px;
-  cursor: pointer;
-}
 /* ---------- END Footer------------- */
 
 /* -------------Responsive----------------- */
