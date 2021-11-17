@@ -15,7 +15,7 @@ if (isset($_POST['but_logout'])) {
     localStorage.clear();
   </script>";
   ob_end_flush();
-  header("refresh:0.1;url=index.php");
+  header("refresh:0.1;url=" . base_url);
 }
 
 ?>
